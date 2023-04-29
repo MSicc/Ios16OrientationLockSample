@@ -1,1 +1,1 @@
-# Ios16OrientationSample
+# Ios16OrientationLockSample
