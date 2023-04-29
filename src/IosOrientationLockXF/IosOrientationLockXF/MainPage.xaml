@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IosOrientationLockXF"
+             x:Class="IosOrientationLockXF.MainPage"
+             x:DataType="local:MainViewModel">
+
+    <ScrollView>
+        
+            <StackLayout Margin="12">
+                <!-- Place new controls here -->
+                <Label Text="Welcome to Xamarin.Forms!" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+                
+                <Label Text="{Binding OrientationLockState}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" />
+                
+                <Button Text="Lock Landscape" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Command="{Binding LockLandscapeCommand}"
+                        Margin="12">
+                </Button>
+                    
+                <Button Text="Lock Portrait" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Command="{Binding LockPortraitCommand}"
+                        Margin="12">
+                </Button>
+                    
+                <Button Text="Unlock Orientation"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Command="{Binding UnlockOrientationCommand}" 
+                        Margin="12">
+                </Button>
+            </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

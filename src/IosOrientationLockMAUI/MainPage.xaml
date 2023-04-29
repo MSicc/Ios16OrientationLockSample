@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iosOrientationLockMaui="clr-namespace:IosOrientationLockMAUI"
+             x:Class="IosOrientationLockMAUI.MainPage"
+             x:DataType="iosOrientationLockMaui:MainViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="{Binding OrientationLockState}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <Button Text="Lock Landscape" 
+                    HorizontalOptions="Center"
+                    Command="{Binding LockLandscapeCommand}"></Button>
+            
+            <Button Text="Lock Portrait" 
+                    HorizontalOptions="Center"
+                    Command="{Binding LockPortraitCommand}"></Button>
+            
+            <Button Text="Unlock Orientation"
+                    HorizontalOptions="Center"
+                    Command="{Binding UnlockOrientationCommand}"></Button>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
